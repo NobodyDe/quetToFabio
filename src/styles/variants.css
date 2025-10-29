@@ -1,0 +1,7 @@
+:root {
+  --bgc-white: ##f0ffff;
+  --bgc-black: #1f1f1f;
+
+  --title: 700 2rem/2rem "Roboto";
+  --paragraph: 500 1rem/1.25rem "Roboto";
+}
