@@ -8,10 +8,25 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Pergunte ao Fabio!</title>
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <a id="logo-github" href="">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a id="logo-linkedin" href="">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </nav>
     <main>
       <h1 class="title">Pergunte ao Fabio!</h1>
       <p>Coloque abaixo as opções e deixe que o Fabio decida por você!</p>
@@ -21,8 +36,8 @@
           <p>vs</p>
           <input type="text" placeholder="Opção" />
           <button>+</button>
-          <button type="submit">Perguntar</button>
         </div>
+        <button type="submit">Perguntar</button>
       </form>
     </main>
     <script type="module" src="/src/main.js" defer></script>
