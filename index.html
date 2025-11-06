@@ -20,10 +20,13 @@
   </head>
   <body>
     <nav>
-      <a id="logo-github" href="">
+      <a id="logo-github" href="https://github.com/NobodyDe">
         <ion-icon name="logo-github"></ion-icon>
       </a>
-      <a id="logo-linkedin" href="">
+      <a
+        id="logo-linkedin"
+        href="https://www.linkedin.com/in/henriquesantos1310"
+      >
         <ion-icon name="logo-linkedin"></ion-icon>
       </a>
     </nav>
@@ -31,14 +34,18 @@
       <h1 class="title">Pergunte ao Fabio!</h1>
       <p>Coloque abaixo as opções e deixe que o Fabio decida por você!</p>
       <form action="">
-        <div>
-          <input type="text" placeholder="Opção" />
+        <div class="options">
+          <input type="text" placeholder="Opção" required="True" />
           <p>vs</p>
-          <input type="text" placeholder="Opção" />
-          <button>+</button>
+          <input type="text" placeholder="Opção" required="True" />
+          <button class="more">+</button>
         </div>
-        <button type="submit">Perguntar</button>
+        <button class="Ask" type="submit">Perguntar</button>
       </form>
+      <footer class="footer-hidden">
+        <p>O Fabio escolheu:</p>
+        <h1 class="result"></h1>
+      </footer>
     </main>
     <script type="module" src="/src/main.js" defer></script>
   </body>
