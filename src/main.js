@@ -1,7 +1,23 @@
 const form = document.querySelector("form");
 const footer = document.querySelector("footer");
 const buttonMore = document.querySelector(".more");
+const buttonLess = document.querySelector(".less");
 const options = document.querySelector(".options");
+const lastItem = document.querySelector("#lasted");
+
+buttonLess.addEventListener("click", (e) => {
+  e.preventDefault();
+  const deleteOptions = document.querySelectorAll(".options > *");
+
+  if (deleteOptions.length > 0) {
+    deleteOptions[0].remove();
+  }
+  if (deleteOptions.length > 1) {
+    deleteOptions[1].remove();
+  }
+
+  console.log(deleteOptions);
+});
 
 buttonMore.addEventListener("click", (e) => {
   e.preventDefault();
@@ -23,11 +39,13 @@ buttonMore.addEventListener("click", (e) => {
   const p = createInputsFunc("p", {});
   p.innerHTML = "vs";
 
-  function addChildren(children = []) {
-    children.map((children) => options.appendChild(children));
+  //options.insertBefore(p, lastItem);
+
+  function addChildren(children = [], lastedItem) {
+    children.map((children) => options.insertBefore(children, lastedItem));
   }
 
-  addChildren([p, input]);
+  addChildren([input, p], lastItem);
 });
 
 form.onsubmit = (event) => {
